@@ -1,0 +1,19 @@
+<html>
+	<head>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'estilos.css' %}" />
+	</head>
+	<body>
+		<h1>Calculadora de peso</h1>
+		<form action="proceso" method="POST">
+			{% csrf_token %}
+			<label>Nombre: </label>
+			<input type="text" name="nombre" />
+			<br />
+			<br />
+			<label>Peso: </label>
+			<input type="number" name="peso" />
+			<input type="submit" />
+		</form>
+	</body>
+</html>
